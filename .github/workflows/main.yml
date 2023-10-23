@@ -37,9 +37,9 @@ jobs:
       - name: Connectivity Risk Analysis
         run: iac-risk-analysis
         env:
-          CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
-          CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-          CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+          ALGOSEC_TENANT_ID: ${{ secrets.ALGOSEC_TENANT_ID }}
+          ALGOSEC_CLIENT_ID: ${{ secrets.ALGOSEC_CLIENT_ID }}
+          ALGOSEC_CLIENT_SECRET: ${{ secrets.ALGOSEC_CLIENT_SECRET }}
           ######
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_WORKSPACE: ${{ secrets.GITHUB_WORKSPACE }}

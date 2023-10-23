@@ -46,7 +46,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           ######
           #CF_LOGIN_API: https://stage.app.algosec.com/api/algosaas/auth/v1/access-keys/login
-          region: anz
+          CF_REGION: anz
           #####
           framework: docker
           WORK_ON_CHANGE: false

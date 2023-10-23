@@ -37,17 +37,19 @@ jobs:
       - name: Connectivity Risk Analysis
         run: iac-risk-analysis
         env:
-          CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
-          CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-          CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+          ALGOSEC_TENANT_ID: ${{ secrets.ALGOSEC_TENANT_ID }}
+          ALGOSEC_CLIENT_ID: ${{ secrets.ALGOSEC_CLIENT_ID }}
+          ALGOSEC_CLIENT_SECRET: ${{ secrets.ALGOSEC_CLIENT_SECRET }}
           ######
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_WORKSPACE: ${{ secrets.GITHUB_WORKSPACE }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           ######
-          CF_LOGIN_API: https://stage.app.algosec.com/api/algosaas/auth/v1/access-keys/login
+          #CF_LOGIN_API: https://stage.app.algosec.com/api/algosaas/auth/v1/access-keys/login
+          CF_REGION: anz
           #####
-          framework: docker
-          WORK_ON_CHANGE: false
+          FRAMEWORK: docker
           WORKING_DIR: .
-          APIGATEWAY_BASE_URL: https://oka9hih9wh.execute-api.us-east-1.amazonaws.com/stage/ci/docker-scan
+          DOCKERFILE_NAME: Dockerfile
+          MIN_LEVEL_TO_BLOCK_PR: 0
+          PRODUCT: prevasio

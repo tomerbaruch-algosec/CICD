@@ -52,3 +52,4 @@ jobs:
           WORKING_DIR: .
           DOCKERFILE_NAME: Dockerfile
           MIN_LEVEL_TO_BLOCK_PR: 0
+          PRODUCT: prevasio
